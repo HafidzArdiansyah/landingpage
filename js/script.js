@@ -33,4 +33,21 @@ $(document).ready(function() {
 	
 	// Menjalankan fungsi moveSlide setiap 3 detik menggunakan setInterval
 	setInterval(moveSlide, 3000);
+	
+	// Event listener untuk tombol navigasi slide
+	$('.prev-slide').on('click', function() {
+		currentSlide--;
+		if (currentSlide < 0) {
+			currentSlide = slideCount - 1;
+			var newLeft = -currentSlide * slideWidth;
+			$('.slide-container').css('left', newLeft + 'px');
+		} else {
+			var newLeft = -currentSlide * slideWidth;
+			$('.slide-container').animate({left: newLeft + 'px'}, 500);
+		}
+	});
+	
+	$('.next-slide').on('click', function() {
+		moveSlide();
+	});
 });
