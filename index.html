@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Jasa Kepelabuhanan</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Website Jasa Kepelabuhanan</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Beranda</a></li>
+					<li><a href="#">Tentang Kami</a></li>
+					<li class="dropdown">
+						<a href="#">Layanan</a>
+						<div class="dropdown-content">
+							<a href="#">Layanan 1</a>
+							<a href="#">Layanan 2</a>
+							<a href="#">Layanan 3</a>
+						</div>
+					</li>
+					<li><a href="#">Kontak</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="slider">
+		<div class="slide-container">
+			<div class="slide">
+				<img src="assets/img/picture001.png" alt="Slide 1">
+				<div class="caption">Keterangan Slide 1</div>
+			</div>
+			<div class="slide">
+				<img src="assets/img/picture002.png" alt="Slide 2">
+				<div class="caption">Keterangan Slide 2</div>
+			</div>
+			<div class="slide">
+				<img src="assets/img/picture003.png" alt="Slide 3">
+				<div class="caption">Keterangan Slide 3</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="container">
+			<h2>Tentang Kami</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo felis sit amet elit commodo interdum. Praesent vel dolor in nisl vestibulum lacinia. Morbi ut mi et urna bibendum consequat ut sit amet enim. Vivamus interdum leo at elit commodo, a ultrices quam ultrices.</p>
+			<p>Phasellus commodo mauris vitae lectus malesuada mollis. Fusce non turpis eget urna varius eleifend vel ac massa. Maecenas euismod lacus ut augue auctor, in ullamcorper neque ultrices. Pellentesque sollicitudin semper purus vel eleifend. Sed fringilla, justo at consectetur fermentum, ante nisi sodales est, vel imperdiet nulla dolor vel augue.</p>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<h3>Kontak Kami</h3>
+			<form action="submit.php" method="post">
+				<label for="name">Nama:</label>
+				<input type="text" id="name" name="name">
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+
+				<label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan"></textarea>
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>    
