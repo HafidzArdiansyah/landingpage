@@ -1,53 +1,26 @@
-$(document).ready(function() {
-	// Image slide header
+document.addEventListener("DOMContentLoaded", function () {
+    const themeSwitch = document.querySelector("#theme-switch");
+    const currentTheme = localStorage.getItem("theme");
 
-	// Menghitung jumlah slide yang ada
-	var slideCount = $('.slide').length;
-	// Mengambil lebar slide
-	var slideWidth = $('.slide').width();
-	// Menghitung lebar total container slide
-	var slideContainerWidth = slideCount * slideWidth;
-	// Mengatur lebar container slide sesuai dengan jumlah dan lebar slide
-	$('.slide-container').css('width', slideContainerWidth + 'px');
-	
-	// Menyimpan nomor slide yang sedang ditampilkan
-	var currentSlide = 0;
-	
-	// Fungsi untuk memindahkan slide
-	function moveSlide() {
-		// Menambahkan nilai currentSlide sebanyak 1
-		currentSlide++;
-		// Jika sudah mencapai slide terakhir, kembali ke slide pertama
-		if (currentSlide === slideCount) {
-			// Set nilai currentSlide kembali ke 0
-			currentSlide = 0;
-			// Mengatur posisi container slide ke awal
-			$('.slide-container').css('left', '0px');
-		} else {
-			// Menghitung posisi slide baru
-			var newLeft = -currentSlide * slideWidth;
-			// Menggerakkan container slide ke posisi baru menggunakan animasi
-			$('.slide-container').animate({left: newLeft + 'px'}, 500);
-		}
-	}
-	
-	// Menjalankan fungsi moveSlide setiap 3 detik menggunakan setInterval
-	setInterval(moveSlide, 3000);
-	
-	// Event listener untuk tombol navigasi slide
-	$('.prev-slide').on('click', function() {
-		currentSlide--;
-		if (currentSlide < 0) {
-			currentSlide = slideCount - 1;
-			var newLeft = -currentSlide * slideWidth;
-			$('.slide-container').css('left', newLeft + 'px');
-		} else {
-			var newLeft = -currentSlide * slideWidth;
-			$('.slide-container').animate({left: newLeft + 'px'}, 500);
-		}
-	});
-	
-	$('.next-slide').on('click', function() {
-		moveSlide();
-	});
+    if (currentTheme) {
+        document.body.classList.add(currentTheme);
+
+        if (currentTheme === "dark-mode") {
+            themeSwitch.checked = true;
+        }
+    }
+
+    themeSwitch.addEventListener("change", function () {
+        if (this.checked) {
+            switchTheme("dark-mode");
+        } else {
+            switchTheme("light-mode");
+        }
+    });
+
+    function switchTheme(theme) {
+        document.body.classList.remove("dark-mode", "light-mode");
+        document.body.classList.add(theme);
+        localStorage.setItem("theme", theme);
+    }
 });
