@@ -27,7 +27,7 @@ body {
 
 .carousel-item img {
     width: 50%;
-    height: auto;
+    height: 50%;
     margin: 0 auto; /* Menambahkan margin otomatis agar gambar tetap di tengah */
 }
 
