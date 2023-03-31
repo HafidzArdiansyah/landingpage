@@ -1,78 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Website Jasa Kepelabuhanan</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<div class="container">
-			<h1>Website Jasa Kepelabuhanan</h1>
-			<nav>
-				<ul>
-					<li><a href="#">Beranda</a></li>
-					<li><a href="#">Tentang Kami</a></li>
-					<li class="dropdown">
-						<a href="#">Layanan</a>
-						<div class="dropdown-content">
-							<a href="#">Layanan 1</a>
-							<a href="#">Layanan 2</a>
-							<a href="#">Layanan 3</a>
-						</div>
-					</li>
-					<li><a href="#">Kontak</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">BrandName</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <label class="switch">
+                                <input type="checkbox" id="theme-switch">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<section class="slider">
-		<div class="slide-container">
-			<div class="slide">
-				<img src="assets/img/picture001.png" alt="Slide 1">
-				<div class="caption">Keterangan Slide 1</div>
-			</div>
-			<div class="slide">
-				<img src="assets/img/picture002.png" alt="Slide 2">
-				<div class="caption">Keterangan Slide 2</div>
-			</div>
-			<div class="slide">
-				<img src="assets/img/picture003.png" alt="Slide 3">
-				<div class="caption">Keterangan Slide 3</div>
-			</div>
-		</div>
-		<div class="slider-nav">
-			<button class="prev-slide">&lt;</button>
-			<button class="next-slide">&gt;</button>
-		</div>
-	</section>
-	
-
-	<section class="content">
-		<div class="container">
-			<h2>Tentang Kami</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo felis sit amet elit commodo interdum. Praesent vel dolor in nisl vestibulum lacinia. Morbi ut mi et urna bibendum consequat ut sit amet enim. Vivamus interdum leo at elit commodo, a ultrices quam ultrices.</p>
-			<p>Phasellus commodo mauris vitae lectus malesuada mollis. Fusce non turpis eget urna varius eleifend vel ac massa. Maecenas euismod lacus ut augue auctor, in ullamcorper neque ultrices. Pellentesque sollicitudin semper purus vel eleifend. Sed fringilla, justo at consectetur fermentum, ante nisi sodales est, vel imperdiet nulla dolor vel augue.</p>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container">
-			<h3>Kontak Kami</h3>
-			<form action="submit.php" method="post">
-				<label for="name">Nama:</label>
-				<input type="text" id="name" name="name">
-
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email">
-
-				<label for="pesan">Pesan:</label>
-                <textarea id="pesan" name="pesan"></textarea>
-                <input type="submit" value="Kirim">
-            </form>
+    <main>
+        <div class="container text-center">
+            <h1 class="display-3">Welcome to Our Landing Page</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor metus eget nisi lacinia, eget fermentum neque aliquet.</p>
+            <button type="button" class="btn btn-primary">Learn More</button>
         </div>
-    </footer>
-    
-    <script src="js/script.js"></script>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>    
+</html>
