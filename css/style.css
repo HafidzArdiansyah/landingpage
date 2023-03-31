@@ -25,6 +25,12 @@ body {
     height: 0;
 }
 
+.carousel-item img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto; /* Menambahkan margin otomatis agar gambar tetap di tengah */
+}
+
 .slider {
     position: absolute;
     cursor: pointer;
