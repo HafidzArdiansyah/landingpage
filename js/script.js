@@ -1,26 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const themeSwitch = document.querySelector("#theme-switch");
-    const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-
-        if (currentTheme === "dark-mode") {
-            themeSwitch.checked = true;
-        }
+$(document).ready(function() {
+  // Smooth scrolling for anchor links
+  $('a.nav-link').click(function(event) {
+    if (this.hash !== '') {
+      event.preventDefault();
+      const hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function() {
+        window.location.hash = hash;
+      });
     }
+  });
 
-    themeSwitch.addEventListener("change", function () {
-        if (this.checked) {
-            switchTheme("dark-mode");
-        } else {
-            switchTheme("light-mode");
-        }
-    });
-
-    function switchTheme(theme) {
-        document.body.classList.remove("dark-mode", "light-mode");
-        document.body.classList.add(theme);
-        localStorage.setItem("theme", theme);
+  // Owl Carousel initialization
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
     }
+  });
+
+  // Your custom scripts here
 });
