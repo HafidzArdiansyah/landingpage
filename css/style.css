@@ -1,81 +1,93 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
 body {
-    transition: background-color 0.5s ease;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
 }
 
-.light-mode {
-    background-color: #ffffff;
-    color: #000000;
+.container {
+  padding: 20px;
 }
 
-.dark-mode {
-    background-color: #1c1c1c;
-    color: #ffffff;
+/* Navbar styling */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.nav-link {
+  color: #333;
+  font-weight: bold;
 }
 
-/*.carousel-item img {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-}
-*/
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    transition: 0.5s;
+/* Jumbotron styling */
+.jumbotron {
+  background-image: url('path-to-your-image.jpg');
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 0;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .5s;
+.jumbotron h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-input:checked + .slider {
-    background-color: #2196F3;
+/* Main content styling */
+.section-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+.feature {
+  margin-bottom: 40px;
 }
 
-.slider.round {
-    border-radius: 34px;
+.feature-icon {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
-.slider.round:before {
-    border-radius: 50%;
+.feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+.feature-description {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .jumbotron {
+    padding: 100px 0;
+  }
 }
